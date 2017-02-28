@@ -6,4 +6,12 @@ describe("Fibonacci", () =>{
     let fibonacci = new Fibonacci();
     expect(fibonacci).to.be.defined;
   });
+
+  it("shall have the ability to return an array of fibonacci numbers based on input n", () => {
+    let fibonacci = new Fibonacci();
+    let n = 5;
+    let expectedOutput = [0, 1, 1, 2, 3]
+
+    expect(fibonacci.getFibonacci(n)).to.deep.equal(expectedOutput);
+  });
 });
